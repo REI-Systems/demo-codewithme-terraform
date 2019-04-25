@@ -3,5 +3,5 @@ variable "region" {
 }
 
 variable "key_name" {
-  default = "miams"
+  default = "your-ssh-key-name-here"
 }

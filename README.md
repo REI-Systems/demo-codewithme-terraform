@@ -12,13 +12,13 @@ VPC with 1 public, 1 private subnet.
 Security groups for each Servers.
 
 ### Instances
-2 Amazon Linux Instances with existing SSH keys.
+2 Amazon Centos Linux Instances with existing SSH keys.
 
 ## How to run
 
 Make sure that you have a SSH key and mentioned in vars.tf.
 
-Change the AWS region in vars.tf to your proferred one.
+Default AWS region is us-east-1, change the AWS region in vars.tf to your preference.
 
 Use the below commands to build, review and execute.
 
