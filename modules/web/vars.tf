@@ -13,3 +13,7 @@ variable "subnet_id" {
 variable "vpc_id" {
   description = "VPC ID information for TF servers."
 }
+
+variable "private_key" {
+  description = "Private SSH Key used to access servers."
+}

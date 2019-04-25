@@ -1,4 +1,5 @@
 # Create the security group for web server
+
 resource "aws_security_group" "test-web" {
   name = "test-web"
   description = "Security Group for Web Server"
@@ -42,5 +43,20 @@ resource "aws_instance" "web" {
   tags {
     Name = "Web",
     CR = "SHUTDOWN"
+  }
+
+  provisioner "remote-exec" {
+     connection {
+       type     = "ssh"
+       user     = "centos"
+       private_key = "${file(var.private_key)}"
+     }
+
+
+    inline = [
+      "# sudo yum update -y",
+      "sudo yum install -q -y httpd.x86_64",
+      "git clone -q https://github.com/WordPress/WordPress.git"
+    ]
   }
 }

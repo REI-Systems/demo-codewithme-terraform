@@ -1,1 +1,1 @@
-{"comment":"UI system to support JSON only.","key_name":"your-ssh-key-name-here","region":"us-east-1"}
+{"comment":"UI system to support JSON only.","key_name":"miams","region":"us-east-1","private_key":"~/.ssh/miams.pem"}
